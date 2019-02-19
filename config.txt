@@ -1,0 +1,17 @@
+{
+    // Wallet address
+    "address": "NQ37 47US CL1J M0KQ KEY3 YQ4G KGHC VPVF 8L02",
+
+    // Device name to show in the dashboard
+    "name": "*",
+
+    // Expected hashrate in kH/s
+    // "hashrate": 100,
+
+    // GPU devices to use
+    // "devices": [0],
+
+    // Allocated memory in Mb for each device
+    // "memory": [2048]
+}
+

@@ -1,0 +1,7 @@
+/node_modules
+/build
+/peer-key
+/sushipool.conf
+/nimiq_node_native.node
+/nimiqpocket-amd-1.0.0.zip
+*.exe
