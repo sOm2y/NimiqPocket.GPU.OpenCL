@@ -1,13 +1,13 @@
 {
-  "name": "sushipool-opencl-miner",
-  "version": "1.0.4",
+  "name": "nimiqpocket-gpu-miner",
+  "version": "1.1.1",
   "main": "index.js",
-  "homepage": "https://sushipool.com/",
+  "homepage": "https://nimiqpocket.com/",
   "description": "",
   "private": true,
   "author": {
-    "name": "SushiPool Development Team",
-    "url": "https://sushipool.com/"
+    "name": "Nimiqpocket Development Team",
+    "url": "https://nimiqpocket.com/"
   },
   "license": "AGPL-3.0-or-later",
   "gypfile": true,
@@ -16,7 +16,7 @@
     "rebuild": "node-gyp rebuild"
   },
   "dependencies": {
-    "@nimiq/core": "^1.4.1",
+    "@nimiq/core": "^1.4.3",
     "bindings": "^1.4.0",
     "ip": "^1.1.5",
     "nan": "^2.12.1",

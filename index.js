@@ -81,7 +81,7 @@ if (!config) {
     const hashrate = (config.hashrate > 0) ? config.hashrate : 100; // 100 kH/s by default
     const desiredSps = 5;
     const startDifficulty = (1e3 * hashrate * desiredSps) / (1 << 16);
-    const minerVersion = 'GPU Miner 1.0.0';
+    const minerVersion = 'GPU Miner 1.1.1';
     const deviceData = { deviceName, startDifficulty, minerVersion };
 
     Log.i(TAG, `NimiqPocket ${minerVersion} starting`);
