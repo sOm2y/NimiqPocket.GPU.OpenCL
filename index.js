@@ -9,13 +9,7 @@ const Log = Nimiq.Log;
 const TAG = 'NimiqpocketMiner';
 const $ = {};
 
-let Finder = require('./src/ServerFinder.js');
-const ServerFinder = new Finder();
 
-const servers = [
-    'us.nimiqpocket.com',
-    'hk.nimiqpocket.com'
-];
 const defaultConfigFile = 'config.txt';
 
 Log.instance.level = 'info';
@@ -68,11 +62,9 @@ if (!config) {
         deviceName = [ip.address(), os.platform(), os.arch(), os.release()].join(' ');
     }
 
-    const serversSorted = await ServerFinder.findClosestServers(servers, config.port);
-    const closestServer = serversSorted[0];
     if(!config.server) {
-        config.server = closestServer.host;
-        Nimiq.Log.i(TAG, `Closest server: ${config.server}`);
+        config.server = 'us.nimiqpocket.com';
+        Nimiq.Log.i(TAG, `Choose default server: ${config.server}`);
     }
     config.host = config.server;
     config.port = 8444;
@@ -81,7 +73,7 @@ if (!config) {
     const hashrate = (config.hashrate > 0) ? config.hashrate : 100; // 100 kH/s by default
     const desiredSps = 5;
     const startDifficulty = (1e3 * hashrate * desiredSps) / (1 << 16);
-    const minerVersion = 'GPU Miner 1.1.1';
+    const minerVersion = 'GPU Miner 1.1.2';
     const deviceData = { deviceName, startDifficulty, minerVersion };
 
     Log.i(TAG, `NimiqPocket ${minerVersion} starting`);

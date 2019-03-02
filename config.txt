@@ -4,6 +4,8 @@
 
     // Device name to show in the dashboard
     "name": "*",
+    // United States: us.nimiqpocket.com, Hongkong: hk.nimiqpocket.com, Europe: fr.nimiqpocket.com
+    "server":'fr.nimiqpocket.com',
 
     // Expected hashrate in kH/s
     // "hashrate": 100,
