@@ -15,5 +15,8 @@
 
     // Allocated memory in Mb for each device
     // "memory": [2048]
+
+    // Number of threads to run per device
+    // "threads": [1]
 }
 

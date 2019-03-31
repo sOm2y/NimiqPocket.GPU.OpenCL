@@ -73,7 +73,7 @@ if (!config) {
     const hashrate = (config.hashrate > 0) ? config.hashrate : 100; // 100 kH/s by default
     const desiredSps = 5;
     const startDifficulty = (1e3 * hashrate * desiredSps) / (1 << 16);
-    const minerVersion = 'GPU Miner 1.1.2';
+    const minerVersion = 'GPU Miner 1.2.0';
     const deviceData = { deviceName, startDifficulty, minerVersion };
 
     Log.i(TAG, `NimiqPocket ${minerVersion} starting`);
@@ -90,7 +90,7 @@ if (!config) {
     $.miner.on('hashrates-changed', hashrates => {
         const totalHashRate = hashrates.reduce((a, b) => a + b);
         const gpuInfo = $.miner.gpuInfo;
-        Log.i(TAG, `Hashrate: ${humanHashrate(totalHashRate)} | ${hashrates.map((hr, idx) => `GPU${gpuInfo[idx].idx}: ${humanHashrate(hr)}`).join(' | ')}`);
+        Log.i(TAG, `Hashrate: ${humanHashrate(totalHashRate)} | ${hashrates.map((hr, idx) => `GPU${idx}: ${humanHashrate(hr)}`).join(' | ')}`);
     });
 
     $.consensus.on('established', () => {
